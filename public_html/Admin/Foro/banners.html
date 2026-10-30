@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Banners y Anuncios - Admin</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../app.css" />
+  </head>
+  <body>
+    <div id="header-root"></div>
+
+    <div id="root">
+      <div class="app-body">
+        <aside class="sidebar">
+          <div class="section-title">Opciones del Módulo</div>
+          <div class="sidebar-options">
+            <div class="option" data-option="eliminar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash2 lucide-trash-2 w-5 h-5 text-white" aria-hidden="true"><path d="M10 11v6"></path><path d="M14 11v6"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M3 6h18"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+              Eliminar mensajes inapropiados
+            </div>
+            <div class="option active" data-option="banners"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-megaphone w-5 h-5 text-[#1773b0]" aria-hidden="true"><path d="M11 6a13 13 0 0 0 8.4-2.8A1 1 0 0 1 21 4v12a1 1 0 0 1-1.6.8A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"></path><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"></path><path d="M8 6v8"></path></svg>
+              Gestionar banners y anuncios
+            </div>
+          </div>
+        </aside>
+
+        <main class="content">
+          <div id="content-area" class="content-section">
+            <!-- Content rendered by banners.js -->
+          </div>
+        </main>
+      </div>
+
+      <div class="footer">© 2025 English Academy - Admin Panel</div>
+    </div>
+
+    <script>
+      // Load header.html dynamically and execute dependent scripts after
+      fetch("../header.html")
+        .then((r) => r.text())
+        .then((html) => {
+          document.getElementById("header-root").innerHTML = html;
+          // Execute scripts inside the fetched header fragment
+          Array.from(
+            document.getElementById("header-root").querySelectorAll("script")
+          ).forEach((oldScript) => {
+            const s = document.createElement("script");
+            if (oldScript.src) {
+              s.src = oldScript.src;
+              s.async = false;
+              document.head.appendChild(s);
+            } else {
+              s.textContent = oldScript.textContent;
+              document.head.appendChild(s);
+            }
+            oldScript.remove();
+          });
+        })
+        .catch((err) => console.error("Failed to load header:", err));
+    </script>
+
+    <script>
+      // Sidebar navigation
+      document.addEventListener("click", function (e) {
+        const opt = e.target.closest(".option");
+        if (!opt) return;
+        document
+          .querySelectorAll(".option")
+          .forEach((x) => x.classList.remove("active"));
+        opt.classList.add("active");
+        const v = opt.dataset.option;
+        // Navigate to corresponding subpage
+        window.location.href = v + ".html";
+      });
+    </script>
+
+    <script src="banners.js"></script>
+    <script src="../js/auth-guard.js"></script>
+  </body>
+</html>

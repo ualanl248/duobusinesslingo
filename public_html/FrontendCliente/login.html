@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Global Speak Academy</title>
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .login-logo {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            background: #1773b0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .login-title {
+            font-size: 24px;
+            color: #1773b0;
+            margin-bottom: 0.5rem;
+        }
+
+        .login-subtitle {
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #1773b0;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 0.75rem;
+            background: #1773b0;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-login:hover {
+            background: #145a8c;
+        }
+
+        .btn-login:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body style="background: #f5f7fa;">
+    <div class="login-container">
+        <div class="login-header">
+            <div class="login-logo">GSA</div>
+            <h1 class="login-title">Global Speak Academy</h1>
+            <p class="login-subtitle">Inicia sesión para continuar</p>
+        </div>
+
+        <div id="error-message" class="error-message"></div>
+
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Usuario o Email</label>
+                <input type="text" id="username" name="username" required autofocus>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit" class="btn-login" id="btn-login">
+                Iniciar Sesión
+            </button>
+        </form>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script>
+        const form = document.getElementById('login-form');
+        const btnLogin = document.getElementById('btn-login');
+        const errorMsg = document.getElementById('error-message');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Deshabilitar botón
+            btnLogin.disabled = true;
+            btnLogin.textContent = 'Iniciando sesión...';
+            errorMsg.classList.remove('show');
+
+            try {
+                const response = await AuthAPI.login(username, password);
+
+                if (response.success) {
+                    // Redirigir a la aplicación principal
+                    window.location.href = 'index.html';
+                } else {
+                    showError(response.message || 'Error al iniciar sesión');
+                }
+            } catch (error) {
+                showError('Error de conexión. Por favor, intenta de nuevo.');
+            } finally {
+                btnLogin.disabled = false;
+                btnLogin.textContent = 'Iniciar Sesión';
+            }
+        });
+
+        function showError(message) {
+            errorMsg.textContent = message;
+            errorMsg.classList.add('show');
+        }
+    </script>
+</body>
+
+</html>

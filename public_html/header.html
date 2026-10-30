@@ -1,0 +1,43 @@
+<header>
+  <div class="nav shell">
+    <div class="logo">
+      <a href="./index.html" class="logo-link" data-i18n-aria-label="nav.home_aria" aria-label="Inicio">
+        <div class="logo-mark logo-mark--header" aria-hidden="true"></div>
+        <div class="logo-text">
+          <span class="logo-title">Global Speak</span>
+          <span class="logo-subtitle">academy</span>
+        </div>
+      </a>
+    </div>
+    <nav class="nav-links">
+      <a href="./about.html" data-i18n="nav.about">Sobre nosotros</a>
+      <a href="./faq.html" data-i18n="nav.faq">FAQ</a>
+      <div class="lang-dropdown">
+        <a class="lang" href="#" aria-haspopup="true" aria-expanded="false">ES ▾</a>
+        <div class="lang-menu">
+          <button data-lang="ES" class="active">ES Español</button>
+          <button data-lang="EN">EN English</button>
+          <button data-lang="PT">PT Português</button>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-actions">
+      <!-- Invitado: se ve si NO hay sesión -->
+      <div data-auth="guest">
+        <a class="btn ghost white" href="./login.html" data-i18n="nav.login">Iniciar sesión</a>
+        <a class="btn primary white" href="./register.html" data-i18n="nav.register">Registrarse</a>
+      </div>
+
+      <!-- Logueado: se ve si HAY sesión -->
+      <div data-auth="authed" style="display:none; gap:10px; align-items:center;">
+<span class="btn ghost white" onclick="window.location.href='./FrontendCliente/index.html'" style="cursor:pointer;">
+          <span aria-hidden="true">👤</span>
+          <span data-auth-name>Usuario</span>
+        </span>
+        <a class="btn ghost white" href="#" data-logout data-i18n="nav.logout">Salir</a>
+      </div>
+    </div>
+
+    <button class="nav-toggle" data-i18n-aria-label="nav.menu_aria" aria-label="Menú">☰</button>
+  </div>
+</header>

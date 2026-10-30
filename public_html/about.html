@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="about.meta.title">Quiénes somos | Global Speak Academy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/about.css">
+</head>
+
+<body class="about-page" data-partials-base="./">
+  <!-- Header por include -->
+  <div id="site-header"></div>
+
+  <main>
+    <section class="about-hero">
+      <div class="shell">
+        <h1 class="about-title">
+          <span data-i18n="about.hero.titlePrefix">Sobre</span>
+          <span class="about-title-accent" data-i18n="about.hero.titleAccent">GSA</span>
+        </h1>
+
+        <div class="about-hero-grid">
+          <div class="about-copy">
+            <h2 class="about-subtitle" data-i18n="about.hero.missionTitle">Nuestra Misión</h2>
+
+            <p class="about-lead" data-i18n="about.hero.missionP1">
+              Democratizar el aprendizaje del inglés mediante una plataforma interactiva, accesible y basada en la
+              ciencia del aprendizaje.
+            </p>
+
+            <p class="about-lead" data-i18n="about.hero.missionP2">
+              Somos una plataforma nueva pensada para estudiantes de habla hispana, inglesa y portuguesa, con una
+              experiencia adaptada a cada idioma desde el primer día. Nuestro objetivo es ayudarte a avanzar con
+              claridad y constancia, ya sea para viajar, trabajar o estudiar en el extranjero.
+            </p>
+          </div>
+
+          <div class="about-media">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=1400&q=80"
+              alt="Estudiante feliz levantando el pulgar" data-i18n-attr="alt:about.hero.imageAlt">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-method">
+      <div class="shell">
+        <div class="method-card">
+          <h3 class="method-title" data-i18n="about.method.title">Nuestra Metodología</h3>
+
+          <div class="method-grid">
+            <div class="method-item">
+              <div class="method-icon">📚</div>
+              <h4 data-i18n="about.method.items.spaced.title">Repetición Espaciada</h4>
+              <p data-i18n="about.method.items.spaced.desc">
+                Sistema basado en algoritmos que optimiza la retención de vocabulario a largo plazo.
+              </p>
+            </div>
+
+            <div class="method-item">
+              <div class="method-icon">⚡</div>
+              <h4 data-i18n="about.method.items.active.title">Práctica Activa</h4>
+              <p data-i18n="about.method.items.active.desc">
+                Aprende haciendo: ejercicios interactivos de speaking, writing, listening y reading.
+              </p>
+            </div>
+
+            <div class="method-item">
+              <div class="method-icon">🎯</div>
+              <h4 data-i18n="about.method.items.feedback.title">Feedback Inmediato</h4>
+              <p data-i18n="about.method.items.feedback.desc">
+                Correcciones instantáneas con explicaciones detalladas para acelerar tu aprendizaje.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-contact" id="contacto">
+      <div class="shell">
+        <h3 class="contact-title" data-i18n="about.contact.title">Ponte en contacto</h3>
+        <p class="contact-subtext" data-i18n="about.contact.subtext">
+          Estamos aquí para ayudarte. Escríbenos y resolveremos tus dudas.
+        </p>
+
+        <div class="contact-list">
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <div class="contact-label" data-i18n="about.contact.labels.email">Email</div>
+              <div class="contact-value">contacto@duobusinesslingo.com</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-label" data-i18n="about.contact.labels.phone">Teléfono</div>
+              <div class="contact-value">+34 950 34 65 21</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-label" data-i18n="about.contact.labels.location">Ubicación</div>
+              <div class="contact-value" data-i18n="about.contact.values.location">Málaga, España</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">⏰</div>
+            <div>
+              <div class="contact-label" data-i18n="about.contact.labels.hours">Horario de atención</div>
+              <div class="contact-value" data-i18n="about.contact.values.hours">Lun - Vie: 9:00 - 18:00</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn primary" href="./index.html" data-i18n="about.contact.backHome">Volver al inicio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer por include -->
+  <div id="site-footer"></div>
+
+  <!-- Orden recomendado -->
+  <script src="./i18n.js"></script>
+  <script src="./includes.js"></script>
+  <script src="./script.js"></script>
+  <script src="./js/about.js"></script>
+  <script src="./js/auth.js"></script>
+  <script src="./js/cookie-consent.js"></script>
+
+</body>
+
+</html>

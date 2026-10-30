@@ -1,0 +1,44 @@
+.recover-email-page .shell-narrow{ max-width: 720px; }
+
+.recover-subtitle{ color: var(--muted); margin-bottom: 16px; }
+
+.form-alert{
+  min-height: 18px;
+  margin: 8px 0 10px;
+  font-size: 14px;
+  color: #b91c1c;
+}
+
+.recover-back{
+  text-align: center;
+  color: var(--muted);
+  margin-top: 10px;
+}
+.recover-back a{ color: var(--primary); text-decoration: none; }
+.recover-back a:hover{ text-decoration: underline; }
+
+.dev-link{
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  color: #0f172a;
+  background: #fff;
+}
+.dev-link a{ color: var(--primary); font-weight: 700; }
+/* Recover-email: que el degradado llegue hasta el footer */
+.recover-email-page main{
+  flex: 1;
+  display: flex;
+}
+
+.recover-email-page main > .section{
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;   /* centra vertical */
+}
+
+.recover-email-page .shell-narrow{
+  width: 100%;
+}

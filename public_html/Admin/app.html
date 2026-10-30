@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>English Academy - Admin Panel (HTML clone)</title>
+    <!-- Colors & variables provided by your attached file -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Small layout overrides for this HTML clone -->
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div id="header-root"></div>
+    <div id="root"></div>
+
+    <script>
+      // Load header.html dynamically and execute dependent scripts after
+      fetch("header.html?v=2")
+        .then((r) => r.text())
+        .then((html) => {
+          document.getElementById("header-root").innerHTML = html;
+          // Execute scripts inside the fetched header fragment
+          Array.from(
+            document.getElementById("header-root").querySelectorAll("script")
+          ).forEach((oldScript) => {
+            const s = document.createElement("script");
+            if (oldScript.src) {
+              s.src = oldScript.src;
+              s.async = false;
+              document.head.appendChild(s);
+            } else {
+              s.textContent = oldScript.textContent;
+              document.head.appendChild(s);
+            }
+            oldScript.remove();
+          });
+        })
+        .catch((err) => console.error("Failed to load header:", err));
+    </script>
+    <script src="app.js" type="module"></script>
+    <script src="js/auth-guard.js"></script>
+  </body>
+</html>

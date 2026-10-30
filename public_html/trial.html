@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="trial.meta.title">Prueba | Global Speak Academy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/trial.css">
+</head>
+
+<body class="results-page" data-partials-base="./">
+  <div id="site-header"></div>
+
+  <main>
+    <!-- Vista tipo results -->
+    <section class="section" id="resultsView">
+      <div class="shell">
+        <div class="top-check">
+          <div class="check-circle-lg" aria-hidden="true">✓</div>
+        </div>
+
+        <h1 class="results-title" data-i18n="trial.results.title">¡Evaluación completada!</h1>
+        <p class="results-subtitle" data-i18n="trial.results.subtitle">
+          Basándonos en tus respuestas, hemos seleccionado 3 bloques para ti.
+        </p>
+
+        <!-- Bloque recomendado (1º) -->
+        <div class="hero-card" id="featuredCard">
+          <div>
+            <span class="badge" data-i18n="trial.results.badge">Recomendado para ti</span>
+            <h2 id="featuredTitle" class="hero-title">Bloque principal</h2>
+            <p id="featuredDesc" class="hero-desc">Descripción</p>
+
+            <div class="mini-meta" id="featuredMeta">0/3</div>
+
+            <button class="btn-pill btn-primary" id="featuredBtn" type="button" data-i18n="trial.results.explore">
+              Explorar este bloque
+            </button>
+          </div>
+          <div>
+            <img id="featuredImg" class="hero-img" alt="Bloque recomendado">
+          </div>
+        </div>
+
+        <h3 class="blocks-title" data-i18n="trial.results.other_blocks">Otros bloques asignados</h3>
+        <div class="block-grid" id="otherBlocks"></div>
+
+        <div class="results-cta">
+          <a class="btn-pill btn-primary" href="./register.html?from=trial" data-i18n="trial.results.save_progress">
+            Crear cuenta para guardar progreso
+          </a>
+          <div class="results-cta-link">
+            <a class="muted-link" href="./index.html" data-i18n="trial.results.back_home">Volver al inicio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz -->
+    <section class="section" id="quizView">
+      <div class="quiz-shell">
+        <div class="quiz-topbar">
+          <button class="btn-pill btn-ghost small" id="backToBlocksBtn" type="button"
+            data-i18n="trial.quiz.back_to_blocks">
+            ← Volver a bloques
+          </button>
+
+          <div class="block-switch" id="blockSwitch" aria-label="Bloques"></div>
+        </div>
+
+        <div class="quiz-header">
+          <div>
+            <p class="title" id="quizBlockName">Bloque</p>
+            <p class="subtitle" id="quizSubtitle">Descripción</p>
+            <p class="subtitle" id="quizMeta">Bloque 1 de 3 · Pregunta 1 de 3</p>
+          </div>
+          <div class="quiz-progress">
+            <div id="quizProgressLabel">Pregunta 1 de 9</div>
+            <div class="bar"><span id="quizProgressBar"></span></div>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h2 class="question-text" id="quizQuestion">Pregunta</h2>
+
+          <div id="optionsWrap" class="option-list"></div>
+
+          <div class="feedback ok" id="feedbackOk"></div>
+          <div class="feedback bad" id="feedbackBad"></div>
+
+          <div class="quiz-actions">
+            <button class="btn-pill btn-ghost" id="primaryBackBtn" type="button" data-i18n="trial.btn.back">
+              Volver
+            </button>
+
+            <button class="btn-pill btn-primary" id="primaryActionBtn" type="button">
+              Comprobar respuesta
+            </button>
+          </div>
+        </div>
+
+        <p class="quiz-hint" data-i18n="trial.hint">
+          Al completar los 3 bloques te pediremos crear una cuenta para acceder al resto.
+        </p>
+      </div>
+    </section>
+
+    <!-- Modal final -->
+    <div class="completion-modal" id="completionModal" aria-hidden="true">
+      <div class="completion-card">
+        <div class="check-circle" aria-hidden="true">✓</div>
+        <h3 class="modal-title">¡Excelente trabajo!</h3>
+        <p id="summaryText" class="modal-subtitle">Respondiste correctamente 0 de 0 preguntas.</p>
+
+        <div class="benefits-box">
+          <div class="benefit-item">✓ Acceso a más de 500 lecciones</div>
+          <div class="benefit-item">✓ Seguimiento personalizado de progreso</div>
+          <div class="benefit-item">✓ Ejercicios de pronunciación con IA</div>
+          <div class="benefit-item">✓ Certificados oficiales al completar niveles</div>
+        </div>
+
+        <div class="modal-actions">
+          <a class="btn-pill btn-outline" href="./index.html">Ahora no</a>
+          <a class="btn-pill btn-primary" href="./register.html?from=trial">Crear cuenta gratis</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="./i18n.js"></script>
+  <script src="./includes.js"></script>
+  <script src="./script.js"></script>
+  <script src="./js/config.js"></script>
+  <script src="./js/trial.js"></script>
+</body>
+
+</html>

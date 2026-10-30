@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title data-i18n="login.meta.title">Iniciar sesión | Global Speak Academy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body class="login-page" data-partials-base="./">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="login-hero">
+      <div class="shell login-grid">
+        <div class="login-panel">
+          <div class="login-panel-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18" cy="18" r="15" stroke="#fff" stroke-width="3.2" />
+              <path d="M18 3c-7 7.6-7 22 0 30M18 3c7 7.6 7 22 0 30" stroke="#fff" stroke-width="3.2"
+                stroke-linecap="round" />
+              <path d="M3 18h30" stroke="#fff" stroke-width="3.2" stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <h2 class="login-panel-title" data-i18n="login.panel.title">Bienvenido de vuelta</h2>
+          <p class="login-panel-text" data-i18n="login.panel.text">
+            Continúa tu camino hacia el dominio del inglés. Tu progreso te está esperando.
+          </p>
+
+          <div class="login-tip">
+            <div class="tip-label" data-i18n-html="login.tip.label">
+              <span aria-hidden="true">💡</span> Consejo del día
+            </div>
+            <p data-i18n="login.tip.quote">
+              "La consistencia es clave. Solo 15 minutos diarios pueden marcar una gran diferencia en tu aprendizaje."
+            </p>
+          </div>
+
+          <span class="bubble bubble-1"></span>
+          <span class="bubble bubble-2"></span>
+        </div>
+
+        <div class="login-card">
+          <h2 data-i18n="login.card.title">Iniciar sesión</h2>
+          <p class="login-subtext" data-i18n="login.card.subtitle">Accede a tu cuenta de Global Speak Academy</p>
+
+          <!-- ✅ añade id + name para enviar a la API -->
+          <form class="login-form" id="login-form" novalidate>
+            <div class="field">
+              <label for="login-email">
+                <span data-i18n="login.form.email">Email</span> <span class="required">*</span>
+              </label>
+              <input id="login-email" name="email" type="email" autocomplete="email" required
+                data-i18n-placeholder="login.form.email_ph" placeholder="tu@email.com">
+            </div>
+
+            <div class="field">
+              <label for="login-password">
+                <span data-i18n="login.form.password">Contraseña</span> <span class="required">*</span>
+              </label>
+              <input id="login-password" name="password" type="password" autocomplete="current-password" required
+                data-i18n-placeholder="login.form.password_ph" placeholder="Tu contraseña">
+            </div>
+
+            <div class="login-row">
+
+              <a class="link-muted" href="./recover-email.html" data-i18n="login.form.forgot">¿Olvidaste tu
+                contraseña?</a>
+            </div>
+
+            <!-- ✅ zona de feedback -->
+            <div class="form-alert" id="login-alert" role="alert" aria-live="polite"></div>
+
+            <button class="btn primary full" id="login-submit" type="submit" data-i18n="login.form.submit">
+              Iniciar sesión
+            </button>
+          </form>
+
+          <div class="login-divider" aria-hidden="true">
+            <span class="line"></span>
+            <span class="dot" data-i18n="login.divider.or">o</span>
+            <span class="line"></span>
+          </div>
+
+          <a class="btn outline full" href="./register.html" data-i18n="login.actions.create">
+            Crear cuenta nueva
+          </a>
+
+          <div class="login-back">
+            <a href="./index.html" data-i18n="login.actions.back">Volver al inicio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="./includes.js"></script>
+  <script src="./i18n.js"></script>
+  <script src="./script.js"></script>
+  <script src="./js/config.js"></script>
+  <script>
+    // Cerrar sesión automáticamente si hay token
+    clearSessionOnVisitorPages();
+  </script>
+  <script src="./js/auth.js"></script>
+  <script src="./js/cookie-consent.js"></script>
+  <script src="./js/login.js"></script>
+
+</body>
+
+</html>

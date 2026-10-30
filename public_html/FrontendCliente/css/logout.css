@@ -1,0 +1,40 @@
+/* Estilos para el botón de logout */
+.header-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+    /* Empuja todo a la derecha */
+}
+
+.btn-logout {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    background: #D12323;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.btn-logout:hover {
+    background: #dc2626;
+}
+
+.btn-logout svg {
+    flex-shrink: 0;
+}

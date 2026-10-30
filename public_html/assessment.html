@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="assessment.meta.title">Evaluación rápida | Global Speak Academy</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/assessment.css">
+</head>
+
+<body class="assessment-page" data-partials-base="./">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="assessment-wrap">
+      <div class="assessment-card">
+        <div class="progress-pill" id="assessment-progress-pill">
+          <div class="progress-left">
+            <span data-i18n="assessment.progress.question_word">Pregunta</span>
+            <span id="stepLabel">1</span>
+            <span data-i18n="assessment.progress.of">de</span>
+            <span id="totalSteps">5</span>
+          </div>
+
+          <div class="progress-right">
+            <span id="percentValue">0%</span>
+            <span data-i18n="assessment.progress.completed_word">completado</span>
+          </div>
+
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" id="progressBar" style="width:0%;"></div>
+          </div>
+        </div>
+
+        <div class="card large" id="questionCard">
+          <h1 id="questionTitle" data-i18n="assessment.loading">Cargando...</h1>
+          <div id="optionsList" class="options-list"></div>
+
+          <div class="actions">
+            <button class="btn outline" id="prevBtn" type="button" style="display:none;"
+              data-i18n="assessment.btn.prev">Anterior</button>
+            <button class="btn primary" id="nextBtn" type="button" data-i18n="assessment.btn.next">Siguiente</button>
+          </div>
+
+          <div class="cancel-wrap">
+            <a href="./index.html" class="muted-link" data-i18n="assessment.cancel">Cancelar evaluación</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="./i18n.js"></script>
+  <script src="./includes.js"></script>
+  <script src="./script.js"></script>
+  <script src="./js/config.js"></script>
+  <script src="./js/assessment.js"></script>
+</body>
+
+</html>

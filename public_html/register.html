@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title data-i18n="register.meta.title">Registro | Global Speak Academy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/register.css">
+</head>
+
+<body class="register-page" data-partials-base="./">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="register-hero">
+      <div class="shell">
+        <div class="register-grid">
+          <div class="register-panel">
+            <!-- Decorative bubbles -->
+            <div class="bubble bubble-1" aria-hidden="true"></div>
+            <div class="bubble bubble-2" aria-hidden="true"></div>
+
+            <div class="register-header">
+              <div class="register-icon" aria-hidden="true">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="18" cy="18" r="15" stroke="#fff" stroke-width="3.2" />
+                  <path d="M18 3c-7 7.6-7 22 0 30M18 3c7 7.6 7 22 0 30" stroke="#fff" stroke-width="3.2"
+                    stroke-linecap="round" />
+                  <path d="M3 18h30" stroke="#fff" stroke-width="3.2" stroke-linecap="round" />
+                </svg>
+              </div>
+
+              <h2 data-i18n="register.panel.title">Únete a Global Speak Academy</h2>
+              <p data-i18n="register.panel.subtitle">
+                Comienza tu viaje hacia el dominio del inglés con miles de estudiantes en todo el mundo
+              </p>
+            </div>
+
+            <ul class="register-benefits">
+              <li><span class="check">&#10003;</span> <span data-i18n="register.b1">Lecciones interactivas desde nivel
+                  A1</span></li>
+              <li><span class="check">&#10003;</span> <span data-i18n="register.b2">Algoritmo adaptativo que ajusta el
+                  contenido a tu nivel</span></li>
+              <li><span class="check">&#10003;</span> <span data-i18n="register.b3">Acceso multiplataforma: estudia
+                  desde cualquier dispositivo</span></li>
+            </ul>
+
+            <div class="register-tip">
+              <div class="tip-label" data-i18n="register.tip.label"><span aria-hidden="true">🎁</span> Oferta de
+                bienvenida</div>
+              <p data-i18n="register.tip.text">Regístrate hoy y accede gratis a 3 bloques de contenido. Sin compromiso,
+                sin tarjeta. ¡Empieza ahora!</p>
+            </div>
+          </div>
+
+          <div class="register-card">
+            <h2 data-i18n="register.card.title">Crea tu cuenta</h2>
+            <p class="register-subtext" data-i18n="register.card.subtitle">Completa tus datos para comenzar</p>
+
+            <form class="register-form" id="register-form" novalidate>
+              <div class="field">
+                <label for="reg-name">
+                  <span data-i18n="register.form.name">Username</span> <span class="required">*</span>
+                </label>
+                <input id="reg-name" name="name" type="text" required data-i18n-placeholder="register.form.name_ph"
+                  placeholder="Ej: María García">
+                <span class="field-error" id="error-name"></span>
+              </div>
+
+              <div class="field">
+                <label for="reg-email">
+                  <span data-i18n="register.form.email">Email</span> <span class="required">*</span>
+                </label>
+                <input id="reg-email" name="email" type="email" autocomplete="email" required
+                  data-i18n-placeholder="register.form.email_ph" placeholder="tu@email.com">
+                <span class="field-error" id="error-email"></span>
+              </div>
+
+              <div class="field">
+                <label for="reg-email2">
+                  <span data-i18n="register.form.email2">Confirmar email</span> <span class="required">*</span>
+                </label>
+                <input id="reg-email2" name="email2" type="email" autocomplete="email" required
+                  data-i18n-placeholder="register.form.email2_ph" placeholder="Vuelve a escribir tu email">
+                <span class="field-error" id="error-email2"></span>
+              </div>
+
+              <div class="field">
+                <label for="reg-phone" data-i18n="register.form.phone">Teléfono (opcional)</label>
+                <input id="reg-phone" name="phone" type="tel" autocomplete="tel"
+                  data-i18n-placeholder="register.form.phone_ph" placeholder="Ej: +34612345678">
+                <span class="field-error" id="error-phone"></span>
+              </div>
+
+              <div class="field">
+                <label for="reg-pass">
+                  <span data-i18n="register.form.pass">Contraseña</span> <span class="required">*</span>
+                </label>
+                <input id="reg-pass" name="password" type="password" autocomplete="new-password" required
+                  data-i18n-placeholder="register.form.pass_ph" placeholder="Mínimo 8 caracteres, mayúscula y símbolo">
+                <span class="field-error" id="error-pass"></span>
+              </div>
+
+              <div class="field">
+                <label for="reg-pass2">
+                  <span data-i18n="register.form.pass2">Confirmar contraseña</span> <span class="required">*</span>
+                </label>
+                <input id="reg-pass2" name="password2" type="password" autocomplete="new-password" required
+                  data-i18n-placeholder="register.form.pass2_ph" placeholder="Vuelve a escribir tu contraseña">
+                <span class="field-error" id="error-pass2"></span>
+              </div>
+
+              <label class="terms">
+                <input id="reg-terms" type="checkbox" required>
+                <span data-i18n-html="register.form.terms">
+                  Acepto los <a href="./terms.html">términos y condiciones</a> y la <a href="./privacy.html">política de
+                    privacidad</a>
+                </span>
+              </label>
+              <span class="field-error" id="error-terms"></span>
+
+              <div class="form-alert" id="register-alert" role="alert" aria-live="polite"></div>
+
+              <button class="btn primary full" id="register-submit" type="submit" data-i18n="register.form.submit">
+                Crear cuenta
+              </button>
+            </form>
+
+            <div class="register-alt">
+              <span>
+                <span data-i18n="register.alt.text">¿Ya tienes cuenta?</span>
+                <a href="./login.html" data-i18n="register.alt.link">Inicia sesión</a>
+              </span>
+            </div>
+
+            <div class="register-back">
+              <a href="./index.html" data-i18n="register.back">Volver al inicio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="./js/config.js"></script>
+  <script src="./i18n.js"></script>
+  <script src="./includes.js"></script>
+  <script src="./script.js"></script>
+  <script src="./js/auth.js"></script>
+  <script src="./js/cookie-consent.js"></script>
+  <script src="./js/register.js"></script>
+</body>
+
+</html>

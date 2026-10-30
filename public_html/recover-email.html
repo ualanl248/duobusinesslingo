@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="recoverEmail.meta.title">Recuperar contraseña | Global Speak Academy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/recover-email.css">
+</head>
+
+<body class="recover-email-page" data-partials-base="./">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="section gradient-soft">
+      <div class="shell shell-narrow">
+        <div class="form-card">
+          <h2 class="accent" data-i18n="recoverEmail.title">¿Olvidaste tu contraseña?</h2>
+          <p class="recover-subtitle" data-i18n="recoverEmail.subtitle">
+            Escribe tu email y te enviaremos un enlace para crear una nueva contraseña.
+          </p>
+
+          <form id="recover-email-form" novalidate>
+            <div class="field">
+              <label for="recover-email" data-i18n="recoverEmail.email.label">Email</label>
+              <input id="recover-email" type="email" autocomplete="email" required
+                data-i18n-placeholder="recoverEmail.email.placeholder" placeholder="tu@email.com">
+            </div>
+
+            <div class="form-alert" id="recover-email-alert" role="alert" aria-live="polite"></div>
+
+            <button class="btn primary full" id="recover-email-submit" type="submit" data-i18n="recoverEmail.submit">
+              Enviar enlace
+            </button>
+          </form>
+
+          <p class="recover-back">
+            <a href="./login.html" data-i18n="recoverEmail.back">← Volver a iniciar sesión</a>
+          </p>
+
+          <!-- En local mostraremos aquí un enlace de prueba si el backend lo devuelve -->
+          <div class="dev-link" id="recover-dev-link" hidden></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="./i18n.js"></script>
+  <script src="./includes.js"></script>
+  <script src="./script.js"></script>
+  <script src="./js/config.js"></script>
+  <script src="./js/auth.js"></script>
+  <script src="./js/cookie-consent.js"></script>
+  <script src="./js/recover-email.js"></script>
+</body>
+
+</html>

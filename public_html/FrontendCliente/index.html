@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Speak Academy - Panel de Cliente</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/logout.css">
+</head>
+
+<body class="bg-background">
+    <div id="app-container" class="home-page-container">
+
+        <header class="main-header">
+            <div class="main-header-content">
+                <div class="logo-icon-wrapper">
+                    <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                        fill="none" stroke="#1773b0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                        <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                    </svg>
+                </div>
+
+                <div class="header-meta">
+                    <p class="header-subtitle">Panel de Cliente</p>
+                    <div class="header-controls">
+                        <div class="lang-selector-wrapper">
+                            <label for="lang-selector" class="lang-label">Idioma</label>
+                            <select id="lang-selector" class="lang-selector">
+                                <option value="es" selected>ES</option>
+                                <option value="en">EN</option>
+                                <option value="pt">PT</option>
+                            </select>
+                        </div>
+                        <button id="btn-logout" class="btn-logout" title="Cerrar sesión">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                                <polyline points="16 17 21 12 16 7" />
+                                <line x1="21" y1="12" x2="9" y2="12" />
+                            </svg>
+                            Salir
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content-wrapper">
+            <div class="welcome-section">
+                <h2 class="welcome-title">¡Bienvenido!</h2>
+                <p class="welcome-subtitle">¿Qué vas a aprender hoy?</p>
+            </div>
+
+            <div class="module-grid">
+
+                <div class="module-card group" data-module="actividades">
+                    <div class="module-card-content">
+                        <div class="module-icon-wrapper module-icon-actividades">
+                            <svg class="module-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 12h4l3 8 4-16 3 8h4" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="module-title">Actividades</h3>
+                            <p class="module-description">
+                                Accede a los bloques y tests del plan personalizado
+                            </p>
+                            <a href="#" class="module-link" data-screen="actividades">
+                                Acceder
+                                <svg class="module-link-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-card group" data-module="foro">
+                    <div class="module-card-content">
+                        <div class="module-icon-wrapper module-icon-foro">
+                            <svg class="module-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="module-title">Foro</h3>
+                            <p class="module-description">
+                                Participa en conversaciones y consulta perfiles
+                            </p>
+                            <a href="#" class="module-link" data-screen="foro">
+                                Acceder
+                                <svg class="module-link-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-card group" data-module="perfil">
+                    <div class="module-card-content">
+                        <div class="module-icon-wrapper module-icon-perfil">
+                            <svg class="module-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="module-title">Perfil Usuario</h3>
+                            <p class="module-description">
+                                Gestiona tu información personal y suscripción
+                            </p>
+                            <a href="#" class="module-link" data-screen="perfil">
+                                Acceder
+                                <svg class="module-link-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="main-footer">
+                <p class="footer-text">
+                    © 2025 Global Speak Academy. Todos los derechos reservados.
+                </p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Sincronización de sesión JWT no necesaria para API REST (se maneja por headers) -->
+
+    <script src="js/i18n.js"></script>
+    <script>
+        // Language selector bootstrap: sync with I18n and change language on select
+        document.addEventListener('DOMContentLoaded', async function () {
+            const sel = document.getElementById('lang-selector');
+            if (!sel) return;
+
+            // Lista de idiomas válidos
+            const availableLangs = ['es', 'en', 'pt'];
+
+            // Función para normalizar y validar el idioma
+            function normalizeLanguage(lang) {
+                const normalized = (lang || 'es').toLowerCase();
+                return availableLangs.includes(normalized) ? normalized : 'es';
+            }
+
+            // Sincronizar inmediatamente con localStorage (antes de esperar I18n)
+            const storedLang = normalizeLanguage(localStorage.getItem('gsa_lang'));
+            sel.value = storedLang;
+
+            // Esperar a que I18n cargue el idioma y confirmar sincronización
+            try {
+                if (window.I18n && window.I18n.init) {
+                    await window.I18n.init();
+                }
+                // Re-sincronizar después de I18n por si cambió algo
+                const i18nLang = (window.I18n && window.I18n.getLanguage && window.I18n.getLanguage());
+                const initial = normalizeLanguage(i18nLang || storedLang);
+                sel.value = initial;
+            } catch (e) {
+                console.error('Error inicializando i18n:', e);
+                // Mantener el valor de localStorage
+            }
+
+            sel.addEventListener('change', function (e) {
+                const lang = e.target.value;
+                if (window.I18n && window.I18n.setLanguage) {
+                    window.I18n.setLanguage(lang).catch(() => {
+                        // fallback: store and reload
+                        localStorage.setItem('gsa_lang', lang);
+                        location.reload();
+                    });
+                } else {
+                    localStorage.setItem('gsa_lang', lang);
+                    location.reload();
+                }
+            });
+        });
+    </script>
+    <!-- API y carga dinámica de datos -->
+    <script src="js/api.js?v=20260110"></script>
+    <script src="js/main.js?v=20260110"></script>
+    <script src="js/dynamic-loader.js?v=20260110"></script>
+    <script src="js/logout.js?v=20260110"></script>
+</body>
+
+</html>

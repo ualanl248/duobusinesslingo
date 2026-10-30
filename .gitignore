@@ -1,0 +1,21 @@
+# Volcados de base de datos (solo se versionan los scripts de instalación)
+*.sql
+!public_html/Scripts/Script6.0.sql
+!public_html/Scripts/ScriptEventos6.0.sql
+!public_html/Scripts/ScriptVaciarDatos6.0.sql
+
+# Imágenes subidas por usuarios
+**/assets/avatars/*
+!**/assets/avatars/.gitkeep
+
+# Backend (repo aparte) y configuración con credenciales
+public_html/api_rest/
+config.php
+.env
+
+# Logs y archivos del sistema
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

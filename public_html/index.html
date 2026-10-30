@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">Global Speak Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body class="home">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <h1 data-i18n-html="hero.title">Domina el ingl&eacute;s con<br><span class="accent">Global Speak
+              Academy</span></h1>
+          <p data-i18n="hero.subtitle">Aprende ingl&eacute;s de manera interactiva y efectiva. Lecciones de ejercicios
+            personalizados y seguimiento en tiempo real de tu progreso.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="./assessment.html" data-i18n="hero.cta_primary">Comenzar prueba gratuita</a>
+            <a class="btn outline" href="#planes" data-i18n="hero.cta_secondary">Ver planes</a>
+          </div>
+          <div class="hero-checks">
+            <div class="pill">
+              <span class="checkmark">✓</span>
+              <span data-i18n="hero.no_card">Sin tarjeta de cr&eacute;dito</span>
+            </div>
+            <div class="pill">
+              <span class="checkmark">✓</span>
+              <span data-i18n="hero.cancel_anytime">Cancela cuando quieras</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="blob"></div>
+          <img
+            src="https://images.unsplash.com/photo-1758612215020-842383aadb9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvbmxpbmUlMjBsZWFybmluZyUyMGxhcHRvcCUyMHN0dWRlbnR8ZW58MXx8fHwxNzYxOTAxMTU3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+            data-i18n-alt="hero.image_alt" alt="Persona estudiando en port&aacute;til con taza de caf&eacute;">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell two-col">
+        <div class="media-card tilt square">
+          <img
+            src="https://images.unsplash.com/photo-1543109740-4bdb38fda756?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmdsaXNoJTIwbGVhcm5pbmclMjBlZHVjYXRpb258ZW58MXx8fHwxNzYxOTAxMTU2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+            data-i18n-alt="why.image_alt" alt="Persona estudiando en port&aacute;til con taza de caf&eacute;">
+        </div>
+        <div class="stack gap">
+          <h2 class="accent" data-i18n="why.title">¿Por qu&eacute; elegir Global Speak Academy?</h2>
+          <div class="feature">
+            <div class="icon">⚡</div>
+            <div>
+              <h3 data-i18n="why.f1_title">Aprendizaje gamificado</h3>
+              <p data-i18n="why.f1_desc">Sistema de puntos, rachas y logros que te mantienen motivado. Convierte el
+                aprendizaje en un juego adictivo.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="icon">🎯</div>
+            <div>
+              <h3 data-i18n="why.f2_title">Contenido personalizado</h3>
+              <p data-i18n="why.f2_desc">Algoritmo adaptativo que ajusta el nivel y los ejercicios seg&uacute;n tu
+                progreso y &aacute;reas de mejora.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="icon">⏱️</div>
+            <div>
+              <h3 data-i18n="why.f3_title">Aprende a tu ritmo</h3>
+              <p data-i18n="why.f3_desc">Acceso 24/7 desde cualquier dispositivo. Solo necesitas 15 minutos al
+                d&iacute;a para ver resultados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="planes">
+      <div class="shell">
+        <div class="section-heading">
+          <h2 class="accent">Planes de Suscripción</h2>
+          <p>Elige el plan que mejor se adapte a tus necesidades y comienza a aprender hoy mismo.</p>
+        </div>
+        <div class="plans-grid" id="plans-grid">
+          <!-- Los planes se cargarán dinámicamente -->
+          <div class="reviews-loading"
+            style="grid-column: 1/-1; text-align: center; padding: 2rem; color: #000000;">Cargando
+            planes...</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gradient-soft" id="reviews">
+      <div class="shell">
+        <div class="section-heading">
+          <h3 data-i18n="reviews.title">Lo que dicen nuestros estudiantes</h3>
+          <p data-i18n="reviews.subtitle">M&aacute;s de 100 estudiantes han mejorado su ingl&eacute;s con Global
+            Speak Academy</p>
+        </div>
+        <div class="grid" id="reviews-grid">
+          <!-- Las reseñas se cargarán dinámicamente desde la base de datos -->
+          <div class="reviews-loading"
+            style="grid-column: 1/-1; text-align: center; padding: 2rem; color: #000000;">Cargando
+            reseñas...</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+
+  <script src="./includes.js"></script>
+  <script src="./i18n.js"></script>
+  <script src="./script.js"></script>
+  <script src="./js/config.js"></script>
+  <script>
+    // Cerrar sesión automáticamente si hay token
+    clearSessionOnVisitorPages();
+  </script>
+  <script src="./js/auth.js"></script>
+  <script src="./js/plans.js"></script>
+  <script src="./js/reviews.js"></script>
+  <script src="./js/cookie-consent.js"></script>
+
+</body>
+
+</html>
