@@ -3,7 +3,7 @@
 Plataforma web para una academia de inglés de negocios: web pública de presentación, prueba de nivel, panel de alumno con ejercicios por niveles y foro, y panel de administración para gestionar contenidos, usuarios y suscripciones.
 
 ---
-## Modelado el figma
+## Modelado en figma
 
 <img width="1212" height="689" alt="image" src="https://github.com/user-attachments/assets/ba1d499c-5a7d-4b14-a386-862dc27bdf5b" />
 
